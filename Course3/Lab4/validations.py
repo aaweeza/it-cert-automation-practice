@@ -22,3 +22,20 @@ def validate_user(username, minlen):
 
 
 
+print(validate_user("blue.kale", 3)) # True
+
+# Test cases
+
+print(validate_user("blue.kale", 3))     # Expected: True
+
+print(validate_user(".blue.kale", 3))    # Expected: False
+
+print(validate_user("_bluekale", 3))     # Expected: False
+
+print(validate_user("3blue.kale", 3))    # Expected: False
+
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+
+print(validate_user("red_quinoa", 4)) # True
+
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
